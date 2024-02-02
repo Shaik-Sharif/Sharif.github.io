@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Set your desired background color */
+}
+
+.contact-box {
+    text-align: left;
+    padding: 20px;
+    border: 2px solid #3498db; /* Set your desired border color */
+    border-radius: 10px;
+    width: 300px;
+    background-color: #fff; /* Set your desired box background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hover-effect {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.hover-effect:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #3498db; /* Set your desired hover color */
+}
+.contact-box:hover {
+    border-color: #3498db; /* Set your desired hover border color */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Set your desired hover box shadow */
+}
+
+.contact-box:hover .hover-effect::after {
+    background-color: #3498db; /* Set your desired hover color for the text underline */
+}
+
+.contact-box:hover .contact-info p:hover {
+    color: #3498db; /* Set your desired hover color for the contact info */
+}
+
+.contact-box:hover .contact-info i {
+    color: #3498db; /* Set your desired hover color for the icons */
+}
+
+.contact-box:hover .location-icon + .map-placeholder {
+    display: block;
+}
+
+.contact-info {
+    margin-top: 15px;
+}
+
+.contact-info p {
+    margin: 0;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.contact-info p:hover {
+    color: #3498db; /* Set your desired hover color */
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #3498db; /* Set your desired icon color */
+}
+
+.location-icon {
+    cursor: pointer;
+}
+
+/* Placeholder style for map */
+.map-placeholder {
+    display: none;
+    width: 100%;
+    height: 300px;
+    background: lightgray;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.location-icon:hover + .map-placeholder {
+    display: block;
+}
